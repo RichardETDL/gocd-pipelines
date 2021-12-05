@@ -5,7 +5,7 @@ pipelines:
     materials:
       gitrepo:
         git: https://github.com/RichardETDL/gocd-pipelines.git
-        branch: mains
+        branch: main
     stages:
       - build: # name of stage
           jobs:
