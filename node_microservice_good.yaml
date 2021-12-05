@@ -5,6 +5,7 @@ pipelines:
     materials:
       gitrepo:
         git: https://github.com/RichardETDL/gocd-pipelines.git
+        branch: mains
     stages:
       - build: # name of stage
           jobs:
@@ -15,5 +16,5 @@ pipelines:
                    arguments:
                    - -c
                    - echo "Building app"
-                   
+
 
