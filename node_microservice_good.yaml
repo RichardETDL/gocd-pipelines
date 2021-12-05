@@ -16,5 +16,58 @@ pipelines:
                    arguments:
                    - -c
                    - echo "Building app"
-
+      - depl-dev: # name of stage
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "depl dev"
+      - test-dev: # name of stage
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "test dev"
+       - depl-int:
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "depl int"
+      - test-int:
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "test int"
+       - depl-prd:
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "dev prd
+      - test-prd:
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "test prd"
 
