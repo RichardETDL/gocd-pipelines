@@ -1,0 +1,19 @@
+format_version: 10
+pipelines:
+  pipe1:
+    group: microservices
+    materials:
+      gitrepo:
+        git: https://github.com/RichardETDL/gocd-pipelines.git
+    stages:
+      - build: # name of stage
+          jobs:
+            build: # name of the job
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                   - -c
+                   - echo "Building app"
+                   
+
